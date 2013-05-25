@@ -5,7 +5,7 @@ Sample application to demostrate usage of MvaCrud module
 
 Installation
 ------------
-clone the repository and manually invoke `composer` using the shipped `composer.phar`:
+Clone the repository and manually invoke `composer` using the shipped `composer.phar`:
 
     cd my/project/dir
     git clone git://github.com/rinomeu/CrudExampleApp.git
