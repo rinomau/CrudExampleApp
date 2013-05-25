@@ -8,7 +8,7 @@ Installation
 Clone the repository and manually invoke `composer` using the shipped `composer.phar`:
 
     cd my/project/dir
-    git clone git://github.com/rinomeu/CrudExampleApp.git
+    git clone https://github.com/rinomau/CrudExampleApp.git
     cd CrudExampleApp
     php composer.phar self-update
     php composer.phar install
