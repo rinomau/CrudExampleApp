@@ -29,9 +29,9 @@ Setup doctrine db configuration, create a file `doctrine.local.php` in `config/a
                 'params' => array(
                     'host'     => 'localhost',
                     'port'     => '5432',
-                    'user'     => 'postgres',
-                    'password' => 'vagrant',
-                    'dbname'   => 'crud_example',
+                    'user'     => '_your_user_name_',
+                    'password' => '_your_password_',
+                    'dbname'   => '_your_database_name_',
                 )
             )
         )
