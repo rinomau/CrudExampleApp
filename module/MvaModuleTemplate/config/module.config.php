@@ -73,4 +73,10 @@ return array(
             __DIR__ . '/../view',
         ),
     ),
+    
+    'mvacrud' => array(
+        __NAMESPACE__ => array(
+            'indexPageTitle' => 'Pagina indice del modulo concreto',
+        )
+    )
 );
