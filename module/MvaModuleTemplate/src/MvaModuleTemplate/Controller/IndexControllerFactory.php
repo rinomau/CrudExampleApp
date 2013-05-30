@@ -22,11 +22,6 @@ class IndexControllerFactory implements FactoryInterface
         $I_form->setAttribute('action', '/mva-module-template/process');
         
         $I_service = $serviceLocator->getServiceLocator()->get('MvaModuleTemplate\Service\DogService');
-        // $config = $serviceLocator->get('config');
-        $config = $serviceLocator->getServiceLocator()->get('config');
-        // print_r($config);
-        
-        return new IndexController($I_service, $I_form,$config['mvacrud']);
-        
+        return new IndexController($I_service, $I_form);
     }
 }

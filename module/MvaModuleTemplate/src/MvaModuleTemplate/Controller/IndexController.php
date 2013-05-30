@@ -2,10 +2,10 @@
 
 namespace MvaModuleTemplate\Controller;
 
-class IndexController extends \MvaCrud\Controller\IndexController {
+class IndexController extends \MvaCrud\Controller\CrudIndexController {
     
-    public function __construct($I_service, $I_form, $as_config) {
-        parent::__construct('Cane', $I_service, $I_form, $as_config);
+    public function __construct($I_service, $I_form) {
+        parent::__construct('Cane', $I_service, $I_form);
         
         $this->s_indexTitle = 'Pagina indice custom';
         $this->s_indexTemplate = 'mva-module-template/index/index';
