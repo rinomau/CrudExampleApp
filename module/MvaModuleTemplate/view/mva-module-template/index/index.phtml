@@ -26,6 +26,8 @@
         <?php echo $I_dog->getName()?> 
    </div>
     <div class="span">
+        <i class="icon-search"></i><a href="<?php echo $this->url('mva-module-template/crud', array('action' => 'detail', 'id' => $I_dog->getId()))?>">detail</a>
+        
         <i class="icon-edit"></i><a href="<?php echo $this->url('mva-module-template/crud', array('action' => 'edit', 'id' => $I_dog->getId()))?>">edit</a>
         
         <i class="icon-remove"></i><a href="<?php echo $this->url('mva-module-template/crud', array('action' => 'delete', 'id' => $I_dog->getId()))?>">delete</a>

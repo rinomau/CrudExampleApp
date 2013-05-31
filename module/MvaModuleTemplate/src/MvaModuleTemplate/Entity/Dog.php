@@ -11,6 +11,7 @@ use Zend\Crypt\Password\Bcrypt;
  *
  * @ORM\Table(name="dog")
  * @ORM\Entity(repositoryClass="MvaModuleTemplate\Entity\Repository\DogRepository")
+ * @ORM\HasLifecycleCallbacks
  */
 class Dog
 {
@@ -100,6 +101,21 @@ class Dog
     {
         return $this->isagoodwatchdog;
     }
+    
+    /**
+     * @ORM\PrePersist @ORM\PreUpdate
+     */
+    public function isAllowedToInsert(){
+        //throw new \Exception('Non puoi inserire o aggiornare entità');
+    }
+    
+    /**
+     * @ORM\PostLoad
+     */
+    public function isAllowedToRead(){
+        //throw new \Exception('Non puoi leggere');
+    }
+    
     
     public function fillWith($data){
         $this->id = (isset($data['id'])) ? $data['id'] : null;
