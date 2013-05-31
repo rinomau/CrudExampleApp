@@ -74,9 +74,14 @@ return array(
         ),
     ),
     
-    'mvacrud' => array(
+    'MvaCrud' => array(
         __NAMESPACE__ => array(
-            'indexPageTitle' => 'Pagina indice del modulo concreto',
+            's_indexTitle'  => 'Titolo della index per cane',
+            's_indexTemplate'   => 'crud/index/index',
+            's_newTitle'  => 'Titolo della new per cane',
+            's_newTemplate'   => 'crud/index/default-form',
+            's_editTitle'  => 'Titolo della edit per cane',
+            's_editTemplate'   => 'crud/index/default-form',
         )
     )
 );

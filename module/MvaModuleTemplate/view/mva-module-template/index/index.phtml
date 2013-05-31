@@ -9,7 +9,7 @@
 <br><br>
 </div>
 
-<div><a href="<?php echo $this->url('mva-module-template/default', array('controller' => 'index', 'action' => 'new'))?>">Add</a></div>
+<div><a class="btn btn-success" href="<?php echo $this->url('mva-module-template/default', array('controller' => 'index', 'action' => 'new'))?>">Add</a></div>
 
 <?php if (count($this->as_messages)) { ?>
 <div style="border: 2px solid blue">
@@ -21,8 +21,16 @@
 
 <div>
 <?php foreach($this->aI_entities as $I_dog) { ?>
-<p><?php echo $I_dog->getName()?> 
-- <a href="<?php echo $this->url('mva-module-template/crud', array('action' => 'edit', 'id' => $I_dog->getId()))?>">edit</a> 
-- <a href="<?php echo $this->url('mva-module-template/crud', array('action' => 'delete', 'id' => $I_dog->getId()))?>">delete</a></p>
+<div class="row">
+   <div class="span1">
+        <?php echo $I_dog->getName()?> 
+   </div>
+    <div class="span">
+        <i class="icon-edit"></i><a href="<?php echo $this->url('mva-module-template/crud', array('action' => 'edit', 'id' => $I_dog->getId()))?>">edit</a>
+        
+        <i class="icon-remove"></i><a href="<?php echo $this->url('mva-module-template/crud', array('action' => 'delete', 'id' => $I_dog->getId()))?>">delete</a>
+    </div>
+    
+</div>
 <?php } ?>
 </div>

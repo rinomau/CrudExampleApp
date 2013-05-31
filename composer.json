@@ -15,24 +15,6 @@
         "doctrine/orm": "2.3.3",
         "doctrine/doctrine-module": "0.*",
         "doctrine/doctrine-orm-module": "0.*",
-        "rinomau/MvaCrud": "dev-master"
-    },
-    "packages": {
-        "rinomau/MvaCrud": {
-            "dev-master": {                     
-                "name": "rinomau/MvaCrud",
-                "version": "dev-master",
-                "dist": {
-                    "type": "vcs",
-                    "url": "https://github.com/rinomau/MvaCrud.git"
-                }                    
-            }
-        }         
-    },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/rinomau/MvaCrud.git"
-        }
-    ]
+        "rinomau/mva-crud": "dev-master"
+    }
 }

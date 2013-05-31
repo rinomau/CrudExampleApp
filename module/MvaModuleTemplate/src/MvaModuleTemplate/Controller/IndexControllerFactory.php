@@ -13,15 +13,14 @@ class IndexControllerFactory implements FactoryInterface
      */
     public function createService(ServiceLocatorInterface $serviceLocator)
     {
-
+        $I_service = $serviceLocator->getServiceLocator()->get('MvaModuleTemplate\Service\DogService');
+        
         $I_form = new \MvaModuleTemplate\Form\Dog();
         $I_formFilter = new \MvaModuleTemplate\Form\DogFilter();
         $I_form->setInputFilter($I_formFilter);
-        
-        // set form action
         $I_form->setAttribute('action', '/mva-module-template/process');
         
-        $I_service = $serviceLocator->getServiceLocator()->get('MvaModuleTemplate\Service\DogService');
-        return new IndexController($I_service, $I_form);
+        $as_config = $serviceLocator->getServiceLocator()->get('Config');
+        return new IndexController($I_service, $I_form, $as_config['MvaCrud']);
     }
 }
