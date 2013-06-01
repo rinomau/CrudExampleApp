@@ -25,6 +25,18 @@
    <div class="span1">
         <?php echo $I_dog->getName()?> 
    </div>
+   <div class="span1">
+        <?php 
+        if ( ! is_null($I_dog->getBirthdate()) )
+            echo $I_dog->getBirthdate()->format('d.m.Y');
+        ?> 
+   </div>
+   <div class="span1">
+        <?php 
+        if ( ! is_null($I_dog->getBreed()) )
+            echo $I_dog->getBreed()->getName();
+        ?> 
+   </div>
     <div class="span">
         <i class="icon-search"></i><a href="<?php echo $this->url('mva-module-template/crud', array('action' => 'detail', 'id' => $I_dog->getId()))?>">detail</a>
         
